@@ -14,8 +14,8 @@ gem 'sass-rails', '~> 5.0'
     gem 'jquery-turbolinks'
     gem 'jquery-inputmask-rails'
 
-    gem 'turbolinks'
-    gem 'jbuilder'	
+    gem 'turbolinks' DANDO ERRO
+    gem 'jbuilder'	DANDO ERRO
 
     gem 'devise'
     gem 'devise-i18n'
