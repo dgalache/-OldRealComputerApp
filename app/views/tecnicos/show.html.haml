@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @tecnico.nome
+%p
+  %b Cpf:
+  = @tecnico.cpf
+%p
+  %b Rg:
+  = @tecnico.rg
+%p
+  %b Endereco:
+  = @tecnico.endereco
+%p
+  %b Dataadm:
+  = @tecnico.dataadm
+%p
+  %b Salario:
+  = @tecnico.salario
+
+= link_to 'Edit', edit_tecnico_path(@tecnico)
+\|
+= link_to 'Back', tecnicos_path

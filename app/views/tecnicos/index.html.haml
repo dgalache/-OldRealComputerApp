@@ -1,0 +1,31 @@
+%h1 Listing tecnicos
+
+%table
+  %thead
+    %tr
+      %th Nome
+      %th Cpf
+      %th Rg
+      %th Endereco
+      %th Dataadm
+      %th Salario
+      %th
+      %th
+      %th
+
+  %tbody
+    - @tecnicos.each do |tecnico|
+      %tr
+        %td= tecnico.nome
+        %td= tecnico.cpf
+        %td= tecnico.rg
+        %td= tecnico.endereco
+        %td= tecnico.dataadm
+        %td= tecnico.salario
+        %td= link_to 'Show', tecnico
+        %td= link_to 'Edit', edit_tecnico_path(tecnico)
+        %td= link_to 'Destroy', tecnico, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Tecnico', new_tecnico_path
