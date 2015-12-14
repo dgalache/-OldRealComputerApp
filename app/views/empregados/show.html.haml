@@ -1,27 +1,37 @@
-%p#notice= notice
+- model_class = Empregado
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
 
 %p
-  %b Nome:
+  %strong= model_class.human_attribute_name(:nome) + ':'
+  %br
   = @empregado.nome
 %p
-  %b Telefone:
+  %strong= model_class.human_attribute_name(:telefone) + ':'
+  %br
   = @empregado.telefone
 %p
-  %b Endereco:
+  %strong= model_class.human_attribute_name(:endereco) + ':'
+  %br
   = @empregado.endereco
 %p
-  %b Rg:
+  %strong= model_class.human_attribute_name(:rg) + ':'
+  %br
   = @empregado.rg
 %p
-  %b Cpf:
+  %strong= model_class.human_attribute_name(:cpf) + ':'
+  %br
   = @empregado.cpf
 %p
-  %b Dataadm:
+  %strong= model_class.human_attribute_name(:dataadm) + ':'
+  %br
   = @empregado.dataadm
 %p
-  %b Funcao:
-  = @empregado.funcao
+  %strong= model_class.human_attribute_name(:funcao_id) + ':'
+  %br
+  = @empregado.funcao_id
 
-= link_to 'Edit', edit_empregado_path(@empregado)
-\|
-= link_to 'Back', empregados_path
+
+= link_to t('.back', :default => t("helpers.links.back")), empregados_path, :class => 'btn btn-default'
+= link_to t('.edit', :default => t("helpers.links.edit")), edit_empregado_path(@empregado), :class => 'btn btn-default'
+= link_to t('.destroy', :default => t("helpers.links.destroy")), empregado_path(@empregado), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

@@ -1,33 +1,33 @@
-%h1 Listing empregados
-
-%table
+- model_class = Empregado
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+%table.table.table-striped
   %thead
     %tr
-      %th Nome
-      %th Telefone
-      %th Endereco
-      %th Rg
-      %th Cpf
-      %th Dataadm
-      %th Funcao
-      %th
-      %th
-      %th
-
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:nome)
+      %th= model_class.human_attribute_name(:telefone)
+      %th= model_class.human_attribute_name(:endereco)
+      %th= model_class.human_attribute_name(:rg)
+      %th= model_class.human_attribute_name(:cpf)
+      %th= model_class.human_attribute_name(:dataadm)
+      %th= model_class.human_attribute_name(:funcao_id)
+      %th= model_class.human_attribute_name(:created_at)
+      %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @empregados.each do |empregado|
       %tr
+        %td= link_to empregado.id, empregado_path(empregado)
         %td= empregado.nome
         %td= empregado.telefone
         %td= empregado.endereco
         %td= empregado.rg
         %td= empregado.cpf
         %td= empregado.dataadm
-        %td= empregado.funcao
-        %td= link_to 'Show', empregado
-        %td= link_to 'Edit', edit_empregado_path(empregado)
-        %td= link_to 'Destroy', empregado, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= empregado.funcao_id
+        %td=l empregado.created_at
+        %td
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_empregado_path(empregado), :class => 'btn btn-default btn-xs'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), empregado_path(empregado), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
 
-%br
-
-= link_to 'New Empregado', new_empregado_path
+= link_to t('.new', :default => t("helpers.links.new")), new_empregado_path, :class => 'btn btn-primary'

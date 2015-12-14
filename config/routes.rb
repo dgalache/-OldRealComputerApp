@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  resources :empregados
+  get 'welcome/index'
 
   get 'welcome/index'
   root 'welcome#index'
-
+ 
+  resources :empregados 
   resources :ordems
   resources :clientes
   resources :empregadors

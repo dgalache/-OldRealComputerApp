@@ -1,11 +1,11 @@
-= simple_form_for(@empregador) do |f|
-  = f.error_notification
-
-  .form-inputs
-    = f.input :nome
-    = f.input :telefone
-    = f.input :endereco
-    = f.input :cnpj
-
-  .form-actions
-    = f.submit "Salvar"
+= simple_form_for @empregador, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :nome
+  = f.error_span :nome
+  = f.input :telefone
+  = f.error_span :telefone
+  = f.input :endereco
+  = f.error_span :endereco
+  = f.input :cnpj
+  = f.error_span :cnpj
+  = f.button :submit, :class => 'btn-primary'
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), empregadors_path, :class => 'btn btn-default'

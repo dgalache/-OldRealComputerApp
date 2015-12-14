@@ -1,7 +1,4 @@
-%h1 Editing empregado
-
-= render 'form'
-
-= link_to 'Show', @empregado
-\|
-= link_to 'Back', empregados_path
+- model_class = Empregado
+.page-header
+  %h1=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize
+= render :partial => "form"
