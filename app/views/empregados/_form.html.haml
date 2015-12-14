@@ -1,0 +1,14 @@
+= simple_form_for(@empregado) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :telefone
+    = f.input :endereco
+    = f.input :rg
+    = f.input :cpf
+    = f.input :dataadm
+    = f.association :funcao
+
+  .form-actions
+    = f.button :submit
