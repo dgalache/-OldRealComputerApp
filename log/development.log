@@ -3288,3 +3288,83 @@ Started GET "/" for 127.0.0.1 at 2015-12-14 11:21:55 -0200
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.haml within layouts/application (5.0ms)
 Completed 200 OK in 803ms (Views: 799.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 11:36:17 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.haml within layouts/application (16.9ms)
+Completed 200 OK in 7969ms (Views: 7939.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 11:36:25 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 726ms (Views: 724.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 11:36:30 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 674ms (Views: 672.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 11:36:31 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 759ms (Views: 756.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/empregados" for 127.0.0.1 at 2015-12-14 11:36:33 -0200
+Processing by EmpregadosController#index as HTML
+  [1m[35mEmpregado Load (0.4ms)[0m  SELECT "empregados".* FROM "empregados"
+  Rendered empregados/index.html.haml within layouts/application (1917.9ms)
+Completed 200 OK in 2788ms (Views: 2729.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/empregados" for 127.0.0.1 at 2015-12-14 11:36:36 -0200
+Processing by EmpregadosController#index as HTML
+  [1m[36mEmpregado Load (0.5ms)[0m  [1mSELECT "empregados".* FROM "empregados"[0m
+  Rendered empregados/index.html.haml within layouts/application (21.6ms)
+Completed 200 OK in 776ms (Views: 773.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/empregados" for 127.0.0.1 at 2015-12-14 11:36:37 -0200
+Processing by EmpregadosController#index as HTML
+  [1m[35mEmpregado Load (0.4ms)[0m  SELECT "empregados".* FROM "empregados"
+  Rendered empregados/index.html.haml within layouts/application (26.2ms)
+Completed 200 OK in 951ms (Views: 948.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/empregados" for 127.0.0.1 at 2015-12-14 11:36:38 -0200
+Processing by EmpregadosController#index as HTML
+  [1m[36mEmpregado Load (0.5ms)[0m  [1mSELECT "empregados".* FROM "empregados"[0m
+  Rendered empregados/index.html.haml within layouts/application (22.5ms)
+Completed 200 OK in 771ms (Views: 769.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 11:36:43 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 792ms (Views: 788.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/empregados" for 127.0.0.1 at 2015-12-14 11:36:46 -0200
+Processing by EmpregadosController#index as HTML
+  [1m[35mEmpregado Load (0.5ms)[0m  SELECT "empregados".* FROM "empregados"
+  Rendered empregados/index.html.haml within layouts/application (46.1ms)
+Completed 200 OK in 807ms (Views: 800.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/empregadors" for 127.0.0.1 at 2015-12-14 11:36:49 -0200
+Processing by EmpregadorsController#index as HTML
+  [1m[36mEmpregador Load (0.4ms)[0m  [1mSELECT "empregadors".* FROM "empregadors"[0m
+  Rendered empregadors/index.html.haml within layouts/application (51.2ms)
+Completed 200 OK in 822ms (Views: 811.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/funcaos" for 127.0.0.1 at 2015-12-14 11:36:52 -0200
+Processing by FuncaosController#index as HTML
+  [1m[35mFuncao Load (0.6ms)[0m  SELECT "funcaos".* FROM "funcaos"
+  Rendered funcaos/index.html.haml within layouts/application (65.5ms)
+Completed 200 OK in 886ms (Views: 864.5ms | ActiveRecord: 1.4ms)
